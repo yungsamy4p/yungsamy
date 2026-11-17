@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yung Samy / Kilesz — Desarrollador Full-Stack & Bots Discord</title>
+    <title>Yung Samy — Desarrollador de bots & servidores de Discord</title>
+    
+    <!-- Favicon de la pestaña -->
+    <link rel="icon" type="image/png" href="logo.png">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome para iconos -->
@@ -11,7 +15,7 @@
     <!-- Google Fonts Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Configuración de colores personalizados basados estrictamente en la paleta proporcionada -->
+    <!-- Configuración de colores personalizados -->
     <script>
         tailwind.config = {
             theme: {
@@ -36,6 +40,7 @@
             background-color: #190019;
             color: #FBE4D8;
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
         /* Scrollbar personalizado con la paleta */
         ::-webkit-scrollbar {
@@ -55,23 +60,24 @@
 </head>
 <body class="bg-darkBg text-lightText min-h-screen flex flex-col selection:bg-[#854F6C] selection:text-[#FBE4D8]">
 
-    <!-- Navbar Minimalista -->
+    <!-- Navbar -->
     <header class="fixed top-0 left-0 w-full z-50 bg-[#190019]/90 backdrop-blur-md border-b border-[#522B5B]/40">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-xl font-bold tracking-wider text-[#FBE4D8] flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-[#DFB6B2]"></span>
-                YUNG SAMY <span class="text-[#854F6C] font-light">/ KILESZ</span>
+                YUNG SAMY <span class="text-[#854F6C] font-light">/ DISCORD SERVICES</span>
             </a>
             
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#inicio" class="text-[#DFB6B2] hover:text-[#FBE4D8] transition-colors">Inicio</a>
                 <a href="#proyectos" class="text-[#DFB6B2] hover:text-[#FBE4D8] transition-colors">Proyectos</a>
                 <a href="#servicios" class="text-[#DFB6B2] hover:text-[#FBE4D8] transition-colors">Servicios</a>
+                <a href="#contacto" class="text-[#DFB6B2] hover:text-[#FBE4D8] transition-colors">Contacto</a>
                 <a href="#contacto" class="px-4 py-2 rounded-lg bg-[#522B5B] hover:bg-[#854F6C] text-[#FBE4D8] transition-all shadow-sm">Contratar</a>
             </nav>
 
             <!-- Menú Móvil Botón -->
-            <button id="menu-btn" class="md:hidden text-[#DFB6B2] focus:outline-none text-xl p-2">
+            <button id="menu-btn" aria-label="Abrir menú" class="md:hidden text-[#DFB6B2] focus:outline-none text-xl p-2">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
@@ -81,6 +87,7 @@
             <a href="#inicio" class="mobile-link text-[#DFB6B2] hover:text-[#FBE4D8]">Inicio</a>
             <a href="#proyectos" class="mobile-link text-[#DFB6B2] hover:text-[#FBE4D8]">Proyectos</a>
             <a href="#servicios" class="mobile-link text-[#DFB6B2] hover:text-[#FBE4D8]">Servicios</a>
+            <a href="#contacto" class="mobile-link text-[#DFB6B2] hover:text-[#FBE4D8]">Contacto</a>
             <a href="#contacto" class="mobile-link text-[#DFB6B2] font-semibold">Contratar</a>
         </div>
     </header>
@@ -90,7 +97,6 @@
 
         <!-- Sección Hero -->
         <section id="inicio" class="min-h-[90vh] flex items-center justify-center relative overflow-hidden px-6 py-16">
-            <!-- Efecto de luz ambiental sutil de fondo -->
             <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#522B5B]/20 rounded-full blur-3xl pointer-events-none"></div>
 
             <div class="max-w-4xl mx-auto text-center relative z-10">
@@ -100,11 +106,11 @@
                 </div>
                 
                 <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-[#FBE4D8] mb-6 leading-tight">
-                    Desarrollo Backend & Bots de Discord <span class="text-[#DFB6B2] font-light block sm:inline">de Alto Rendimiento</span>
+                    Desarrollo de bots & servidores de Discord <span class="text-[#DFB6B2] font-light block sm:inline">de Alto Rendimiento</span>
                 </h1>
                 
                 <p class="text-base sm:text-lg text-[#DFB6B2] max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-                    Hola, soy <strong class="text-[#FBE4D8] font-semibold">Yung Samy / Kilesz</strong>. Ingeniero de software especializado en sistemas automatizados para Discord, integraciones con bases de datos complejas y servidores de roleplay (FiveM).
+                    Hola, soy <strong class="text-[#FBE4D8] font-semibold">Yung Samy</strong>. Programador especializado en sistemas automatizados para Discord, integraciones con bases de datos complejas y servidores de roleplay (FiveM).
                 </p>
 
                 <div class="flex flex-wrap items-center justify-center gap-4">
@@ -117,7 +123,7 @@
                     </a>
                 </div>
 
-                <!-- Estadísticas / Tech Stack rápidos -->
+                <!-- Estadísticas -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 pt-12 border-t border-[#522B5B]/30 text-left">
                     <div class="bg-[#2B124C]/60 p-4 rounded-xl border border-[#522B5B]/40">
                         <div class="text-2xl font-bold text-[#FBE4D8]">Node.js / TS</div>
@@ -149,7 +155,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Proyecto 1: Bot Delictual Mysticos RP -->
+                <!-- Proyecto 1 -->
                 <div class="bg-[#2B124C] rounded-2xl border border-[#522B5B] p-8 flex flex-col justify-between hover:border-[#854F6C] transition-all duration-300 shadow-xl group">
                     <div>
                         <div class="flex items-center justify-between mb-6">
@@ -174,7 +180,7 @@
                     </button>
                 </div>
 
-                <!-- Proyecto 2: Bot de US Marshals -->
+                <!-- Proyecto 2 -->
                 <div class="bg-[#2B124C] rounded-2xl border border-[#522B5B] p-8 flex flex-col justify-between hover:border-[#854F6C] transition-all duration-300 shadow-xl group">
                     <div>
                         <div class="flex items-center justify-between mb-6">
@@ -199,7 +205,7 @@
                     </button>
                 </div>
 
-                <!-- Proyecto 3: Bot de Duki / Social -->
+                <!-- Proyecto 3 -->
                 <div class="bg-[#2B124C] rounded-2xl border border-[#522B5B] p-8 flex flex-col justify-between hover:border-[#854F6C] transition-all duration-300 shadow-xl group">
                     <div>
                         <div class="flex items-center justify-between mb-6">
@@ -224,7 +230,7 @@
                     </button>
                 </div>
 
-                <!-- Proyecto 4: Bot Antiplague -->
+                <!-- Proyecto 4 -->
                 <div class="bg-[#2B124C] rounded-2xl border border-[#522B5B] p-8 flex flex-col justify-between hover:border-[#854F6C] transition-all duration-300 shadow-xl group">
                     <div>
                         <div class="flex items-center justify-between mb-6">
@@ -281,7 +287,7 @@
                         </div>
                         <h4 class="text-lg font-bold text-[#FBE4D8] mb-2">FiveM Config</h4>
                         <p class="text-[#DFB6B2] text-xs leading-relaxed font-light">
-                            Configuración experta de servidores ESX y QBCore, integración de scripts personalizados y sincronización con Discord.
+                            Pronto...
                         </p>
                     </div>
 
@@ -311,20 +317,27 @@
             </div>
         </section>
 
-        <!-- Sección Contacto -->
+        <!-- Sección Contacto & Redes -->
         <section id="contacto" class="py-24 px-6 max-w-4xl mx-auto text-center">
             <h2 class="text-xs uppercase tracking-widest text-[#854F6C] font-semibold mb-3">¿Tienes un proyecto en mente?</h2>
             <h3 class="text-3xl sm:text-4xl font-bold text-[#FBE4D8] mb-6">Hablemos de tu Servidor</h3>
             <p class="text-[#DFB6B2] text-sm max-w-lg mx-auto mb-10 font-light">
-                Puedes contactarme directamente a través de Discord o enviarme un mensaje para cotizar tu bot o configuración personalizada.
+                Puedes contactarme directamente a través de Discord, visitar mis repositorios o seguirme en Instagram para ver más de mi trabajo artístico y técnico.
             </p>
 
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://discord.com" target="_blank" class="px-6 py-3.5 rounded-xl bg-[#522B5B] hover:bg-[#854F6C] text-[#FBE4D8] font-medium transition-all flex items-center gap-2 shadow-lg">
+                <!-- Discord -->
+                <a href="https://discord.gg/YWfKEWupBU" target="_blank" class="px-6 py-3.5 rounded-xl bg-[#522B5B] hover:bg-[#854F6C] text-[#FBE4D8] font-medium transition-all flex items-center gap-2 shadow-lg">
                     <i class="fa-brands fa-discord text-lg"></i>
-                    <span>Discord: @yungsamy / @kilesz</span>
+                    <span>Discord (abrir ticket): @likeadversario</span>
                 </a>
-                <a href="https://github.com" target="_blank" class="px-6 py-3.5 rounded-xl bg-[#2B124C] hover:bg-[#522B5B]/50 border border-[#522B5B] text-[#DFB6B2] hover:text-[#FBE4D8] font-medium transition-all flex items-center gap-2">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/yungsamy4p/" target="_blank" class="px-6 py-3.5 rounded-xl bg-[#2B124C] hover:bg-[#522B5B]/50 border border-[#522B5B] text-[#DFB6B2] hover:text-[#FBE4D8] font-medium transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-instagram text-lg text-pink-400"></i>
+                    <span>Instagram: @yungsamy4p</span>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/yungsamy4p" target="_blank" class="px-6 py-3.5 rounded-xl bg-[#2B124C] hover:bg-[#522B5B]/50 border border-[#522B5B] text-[#DFB6B2] hover:text-[#FBE4D8] font-medium transition-all flex items-center gap-2">
                     <i class="fa-brands fa-github text-lg"></i>
                     <span>GitHub Repositorios</span>
                 </a>
@@ -336,15 +349,15 @@
     <!-- Footer -->
     <footer class="bg-[#190019] border-t border-[#522B5B]/40 py-8 px-6 text-center text-xs text-[#854F6C]">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 Yung Samy / Kilesz. Todos los derechos reservados.</p>
-            <p class="text-[#DFB6B2]">Diseño minimalista para GitHub Pages</p>
+            <p>&copy; 2026 Yung Samy. Todos los derechos reservados.</p>
+            <p class="text-[#DFB6B2]">DISEÑOS AVANZADOS</p>
         </div>
     </footer>
 
     <!-- Modal Detalle Proyecto -->
     <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-[#190019]/80 backdrop-blur-sm p-4">
         <div class="bg-[#2B124C] border border-[#522B5B] rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl animate-in fade-in zoom-in duration-200">
-            <button onclick="closeModal()" class="absolute top-5 right-5 text-[#854F6C] hover:text-[#FBE4D8] text-lg p-2">
+            <button onclick="closeModal()" aria-label="Cerrar modal" class="absolute top-5 right-5 text-[#854F6C] hover:text-[#FBE4D8] text-lg p-2">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <h3 id="modal-title" class="text-2xl font-bold text-[#FBE4D8] mb-4">Título del Proyecto</h3>
@@ -398,7 +411,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Cerrar modal haciendo clic fuera de él
+        // Cerrar modal
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 closeModal();
